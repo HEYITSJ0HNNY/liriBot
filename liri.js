@@ -1,20 +1,29 @@
 // create variables
-var keys = require('./keys.js');
-var twitter = require('twitter');
-var spotify = require('node-spotify-api');
-var request = require('request');
+var keys = require('./keys.js').twitterKeys;
+var Twitter = require('twitter');
+var Spotify = require('node-spotify-api');
+var Request = require('request');
 var userRequest = process.argv[2];
+
+
 
 // if statement based on userInput
 if (userRequest === 'my-tweets'){
-  console.log('mytweets');
-}
+  var client = new Twitter(keys);
+  var twitterHandle = {screen_name: 'heyitsj0hnny'};
+  client.get('statuses/user_timeline', twitterHandle, function(error, tweets, response) {
+    if (!error) {
+      var tweetNum = 1
+      for (var i = 0; i < tweets.length; i++){
+        console.log(tweetNum + ': ', tweets[i].text);
+        tweetNum++;
+      }
+    }
+  })
+};
 if (userRequest === 'spotify-this-song'){
-  console.log('spotifyThis');
 }
 if (userRequest === 'movie-this'){
-  console.log('movieThis');
 }
 if (userRequest === 'do-what-it-says'){
-  console.log('doThis');
 }
