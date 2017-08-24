@@ -1,10 +1,11 @@
+// create variables
 var keys = require('./keys.js');
-// console.log(keys);
-
+var twitter = require('twitter');
+var spotify = require('node-spotify-api');
+var request = require('request');
 var userRequest = process.argv[2];
 
-// console.log('user ', userRequest)
-
+// if statement based on userInput
 if (userRequest === 'my-tweets'){
   console.log('mytweets');
 }
