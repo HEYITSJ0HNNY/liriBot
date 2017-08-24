@@ -1,0 +1,25 @@
+{
+  "name": "liriBot",
+  "version": "1.0.0",
+  "description": "le lirlBot app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HEYITSJ0HNNY/liriBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HEYITSJ0HNNY/liriBot/issues"
+  },
+  "homepage": "https://github.com/HEYITSJ0HNNY/liriBot#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.81.0",
+    "twitter": "^1.7.1"
+  }
+}
